@@ -156,3 +156,11 @@ function clearCache() {
 }
 
 var searchesTable = jQuery('#recentSearches');
+
+function success() {
+    console.log('Camera permission granted');
+}
+
+function error() {
+    console.log('Camera permission denied');
+}

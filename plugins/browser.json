@@ -27,6 +27,15 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },
   "dependent_plugins": {
