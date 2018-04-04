@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    }
   },
   "dependent_plugins": {}
 }

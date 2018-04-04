@@ -7,5 +7,6 @@
   "description": "GFS Nutrition Facts is a barcode scanner app that specializes in giving the user details on their food!",
   "author": "Chuck Zimmerman",
   "icons": [],
+  "orientation": "portrait",
   "start_url": "index.html"
 }

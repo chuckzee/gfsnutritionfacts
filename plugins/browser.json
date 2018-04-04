@@ -13,9 +13,6 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
@@ -29,15 +26,6 @@
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },

@@ -28,6 +28,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
+            $.support.cors=true;
             barcodeScan();
             retrieveCache();
             clickListen();
