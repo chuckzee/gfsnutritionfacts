@@ -24,15 +24,15 @@
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-              "count": 554
+              "count": 557
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.camera\" />",
-              "count": 554
+              "count": 557
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
-              "count": 554
+              "count": 557
             }
           ]
         }
