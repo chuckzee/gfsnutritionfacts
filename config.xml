@@ -103,10 +103,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <config-file mode="merge" parent="/*" target="AndroidManifest.xml">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-feature android:name="android.hardware.camera" />
-        <uses-feature android:name="android.hardware.camera.autofocus" />
-    </config-file>
     <plugin name="cordova-plugin-barcodescanner" source="npm" spec="0.7.4" />
 </widget>
