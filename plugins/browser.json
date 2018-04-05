@@ -28,14 +28,17 @@
     "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "phonegap-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
     "cordova-plugin-compat": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-firebase-sdk": {
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   },
   "dependent_plugins": {

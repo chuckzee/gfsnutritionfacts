@@ -335,20 +335,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
-        "pluginId": "phonegap-plugin-barcodescanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
-    },
-    {
-        "file": "plugins/phonegap-plugin-barcodescanner/src/browser/BarcodeScannerProxy.js",
-        "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
-        "pluginId": "phonegap-plugin-barcodescanner",
-        "runs": true
-    },
-    {
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "id": "cordova-plugin-camera.Camera",
         "pluginId": "cordova-plugin-camera",
@@ -377,6 +363,28 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
+    },
+    {
+        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+        "pluginId": "phonegap-plugin-barcodescanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
+    },
+    {
+        "file": "plugins/phonegap-plugin-barcodescanner/src/browser/BarcodeScannerProxy.js",
+        "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
+        "pluginId": "phonegap-plugin-barcodescanner",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-firebase-sdk/www/index.js",
+        "id": "cordova-plugin-firebase-sdk.Firebase",
+        "pluginId": "cordova-plugin-firebase-sdk",
+        "clobbers": [
+            "firebase"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -390,9 +398,10 @@ module.exports.metadata =
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-media-capture": "3.0.1",
     "cordova-plugin-file": "6.0.1",
-    "phonegap-plugin-barcodescanner": "7.1.0",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-camera": "4.0.2"
+    "cordova-plugin-camera": "4.0.2",
+    "phonegap-plugin-barcodescanner": "7.1.0",
+    "cordova-plugin-firebase-sdk": "0.0.1"
 }
 // BOTTOM OF METADATA
 });

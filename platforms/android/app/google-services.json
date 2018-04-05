@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1011895927130",
+    "firebase_url": "https://gfs-nutrition-details.firebaseio.com",
+    "project_id": "gfs-nutrition-details",
+    "storage_bucket": "gfs-nutrition-details.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011895927130:android:1ee8363e2fb5d059",
+        "android_client_info": {
+          "package_name": "com.phonegap.gfsnutrition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011895927130-a2s43ph545kdagt3khj7n5lrf63h8pfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7efitvvc8S35tdItklienprFBzn2ulvk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

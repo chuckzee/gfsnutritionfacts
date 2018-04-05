@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "GFS Nutrition Facts",
   "short_name": "GFS Nutrition Facts",
-  "version": "com.phonegap.helloworld",
+  "version": "com.phonegap.gfsnutrition",
   "description": "GFS Nutrition Facts is a barcode scanner app that specializes in giving the user details on their food!",
   "author": "Chuck Zimmerman",
   "icons": [],

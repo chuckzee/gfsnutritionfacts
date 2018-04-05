@@ -1,0 +1,112 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-firebase-sdk",
+        "scope": null,
+        "escapedName": "cordova-plugin-firebase-sdk",
+        "name": "cordova-plugin-firebase-sdk",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/chuckzee/Sites/gfsdeatails"
+    ]
+  ],
+  "_from": "cordova-plugin-firebase-sdk@latest",
+  "_id": "cordova-plugin-firebase-sdk@0.0.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-firebase-sdk",
+  "_nodeVersion": "7.7.3",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-firebase-sdk-0.0.1.tgz_1491668407056_0.6807704544626176"
+  },
+  "_npmUser": {
+    "name": "jsayol",
+    "email": "josep.sayol@gmail.com"
+  },
+  "_npmVersion": "4.4.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-firebase-sdk",
+    "scope": null,
+    "escapedName": "cordova-plugin-firebase-sdk",
+    "name": "cordova-plugin-firebase-sdk",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-firebase-sdk/-/cordova-plugin-firebase-sdk-0.0.1.tgz",
+  "_shasum": "5a62b79fba5b7f95b176f48e1655fb5f937f9edd",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-firebase-sdk",
+  "_where": "/home/chuckzee/Sites/gfsdeatails",
+  "author": {
+    "name": "Josep Sayol",
+    "email": "josep.sayol@gmail.com",
+    "url": "https://twitter.com/jsayol"
+  },
+  "bugs": {
+    "url": "https://github.com/jsayol/cordova-plugin-firebase-sdk/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-firebase-sdk",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for the native Firebase SDK",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "tslib": "^1.6.0",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5a62b79fba5b7f95b176f48e1655fb5f937f9edd",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-firebase-sdk/-/cordova-plugin-firebase-sdk-0.0.1.tgz"
+  },
+  "gitHead": "054429f2b147efb1162522dd03c10e967da682aa",
+  "homepage": "https://github.com/jsayol/cordova-plugin-firebase-sdk#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "firebase",
+    "realtime",
+    "database",
+    "authentication",
+    "analytics",
+    "auth",
+    "push",
+    "notifications"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "jsayol",
+      "email": "josep.sayol@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-firebase-sdk",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsayol/cordova-plugin-firebase-sdk.git"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack -p",
+    "clean": "rimraf ./www"
+  },
+  "version": "0.0.1"
+}
