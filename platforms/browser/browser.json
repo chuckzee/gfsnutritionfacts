@@ -64,6 +64,9 @@
     },
     "cordova-support-google-services": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "nl.madebymark.share": {
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   },
   "dependent_plugins": {},

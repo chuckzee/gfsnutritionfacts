@@ -5,6 +5,7 @@ a {
 .button {
   text-decoration: none;
   cursor: pointer;
+  text-shadow: none;
 }
 
 a.ui-link.button {
@@ -46,4 +47,13 @@ a.ui-link.button {
   cursor: pointer;
   text-decoration: underline;
   color: $gordon-blue;
+}
+
+#scannerCheckBox {
+  display: inline-block;
+  position: relative;
+  margin: 0 0;
+  padding: 0 0;
+  width: 12px;
+  height: 12px;
 }

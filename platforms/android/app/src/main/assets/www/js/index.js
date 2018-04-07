@@ -29,7 +29,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
             $.support.cors=true;
-            // barcodeScan();
+            barcodePreferences();
             retrieveCache();
             clickListen();
         });
@@ -67,6 +67,37 @@ function clickListen() {
         var barcodeID = barcodeElement.attr('data-id');
         viewPreviousScan(barcodeID);
     });
+    jQuery('#scannerCheckBox').change(function() {
+       preferenceCheckboxInteraction();
+    });
+}
+
+function barcodePreferences() {
+    var checkBox = jQuery('#scannerCheckBox');
+    var scannerPreference = window.localStorage.getItem('scanPref');
+    if (scannerPreference != null) {
+        if(scannerPreference === 'true') {
+            checkBox.prop('checked', true);
+            barcodeScan();
+        }
+        else {
+            checkBox.prop('checked', false);
+        }
+    } else {
+        checkBox.prop('checked', true);
+        window.localStorage.setItem('scanPref', 'true');
+        barcodeScan();
+    }
+}
+
+function preferenceCheckboxInteraction() {
+    var checkBox = jQuery('#scannerCheckBox');
+    setPreference = checkBox.is(":checked");
+    if (setPreference === true) {
+        window.localStorage.setItem('scanPref', 'true');
+    } else {
+        window.localStorage.setItem('scanPref', 'false');
+    }
 }
 
 /**
@@ -78,7 +109,7 @@ function barcodeScan() {
         function (result) {
             var nutritionTable = jQuery('#nutritionTable');
             var barcodeID = result.text;
-            // TODO: Retrieve group, language, and product codes dynamically or via user app settings.
+            // TODO: Retrieve group, language, and product codes dynamically or via user app settings eventually.
             var group = '00001';
             var language = 'eng';
             var productCodes = {
@@ -93,6 +124,7 @@ function barcodeScan() {
                 "93901411549": "411542",
                 "93901698254": "698250"
             };
+            // For some reason the codes received have an extra digit - we chop one off to deal with this
             var scannedID = barcodeID.slice(0,-1);
             barcodeID = productCodes[scannedID];
             $.ajax({
@@ -105,6 +137,7 @@ function barcodeScan() {
                     if (Object.keys(response).length === 0) {
                         nutritionTable.empty();
                         jQuery('#nutritionTable').append('<div class="nutrition-container"><h3>Hey! It looks like this isn\'t one of ours. We might be wrong though, feel free to try again!</h3></div>');
+                        shareContainer.empty();
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
                     var container = parseNutritionInfo(response);
@@ -117,6 +150,8 @@ function barcodeScan() {
                     }
                     window.localStorage.setItem('cachedScans', JSON.stringify(cache_array));
                     retrieveCache();
+                    shareContainer.empty();
+                    shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
                     cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "true", id: barcodeID});
                 },
                 error: function() {
@@ -168,6 +203,8 @@ function viewPreviousScan(barcodeID) {
             var container = parseNutritionInfo(response);
             nutritionTable.empty();
             nutritionTable.append(container);
+            shareContainer.empty();
+            shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
             cordova.plugins.firebase.analytics.logEvent("scan_retrieved", {valid: "true", id: barcodeID});
         },
         error: function() {
@@ -177,6 +214,7 @@ function viewPreviousScan(barcodeID) {
 }
 
 var searchesTable = jQuery('#recentSearches');
+var shareContainer = jQuery('#shareContainer');
 
 function success() {
     console.log('Camera permission granted');
