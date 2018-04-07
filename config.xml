@@ -106,5 +106,6 @@
         <variable name="FIREBASE_VERSION" value="11.6.+" />
     </plugin>
     <plugin name="cordova-support-google-services" spec="^1.1.0" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git" />
     <engine name="android" spec="^7.0.0" />
 </widget>

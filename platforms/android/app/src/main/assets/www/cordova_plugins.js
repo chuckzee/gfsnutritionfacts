@@ -409,6 +409,20 @@ module.exports = [
     "merges": [
       "cordova.plugins.firebase.analytics"
     ]
+  },
+  {
+    "id": "es6-promise-plugin.Promise",
+    "file": "plugins/es6-promise-plugin/www/promise.js",
+    "pluginId": "es6-promise-plugin",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-x-socialsharing.SocialSharing",
+    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+    "pluginId": "cordova-plugin-x-socialsharing",
+    "clobbers": [
+      "window.plugins.socialsharing"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -429,7 +443,9 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.1.0",
   "phonegap-plugin-barcodescanner": "7.1.0",
   "cordova-support-google-services": "1.1.0",
-  "cordova-plugin-firebase-analytics": "0.13.0"
+  "cordova-plugin-firebase-analytics": "0.13.0",
+  "es6-promise-plugin": "4.2.2",
+  "cordova-plugin-x-socialsharing": "5.3.2"
 };
 // BOTTOM OF METADATA
 });

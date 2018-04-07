@@ -49,6 +49,9 @@
         <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseAnalyticsPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
     <name>GFS Nutrition Facts</name>
     <description>
         GFS Nutrition Facts is a barcode scanner app that specializes in giving the user details on their food!

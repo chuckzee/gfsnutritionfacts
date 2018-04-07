@@ -28,6 +28,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
+            // CORS support is vital for GET request to the API
             $.support.cors=true;
             barcodePreferences();
             retrieveCache();
@@ -52,6 +53,10 @@ var app = {
 
 };
 
+/**
+ * Let's keep it simple - storing all our listener functions here so we can trigger them with the device ready
+ */
+
 function clickListen() {
     jQuery('#scanButton').on('click', function() {
         barcodeScan();
@@ -70,7 +75,14 @@ function clickListen() {
     jQuery('#scannerCheckBox').change(function() {
        preferenceCheckboxInteraction();
     });
+    jQuery('#shareButton').on('click', function() {
+        shareNutritionFacts();
+    });
 }
+
+/**
+ * Check the scanner preferences, if they aren't set we default to true, elsewise we are marking the html element with the user preferences they've set in localStorage
+ */
 
 function barcodePreferences() {
     var checkBox = jQuery('#scannerCheckBox');
@@ -90,6 +102,10 @@ function barcodePreferences() {
     }
 }
 
+/**
+ * Click action on checkbox, checking for true or false and setting the localStorage pref accordingly
+ */
+
 function preferenceCheckboxInteraction() {
     var checkBox = jQuery('#scannerCheckBox');
     setPreference = checkBox.is(":checked");
@@ -101,7 +117,7 @@ function preferenceCheckboxInteraction() {
 }
 
 /**
- * Barcode Scanner Function
+ * Barcode Scanner Function coupled with the API GET
  */
 
 function barcodeScan() {
@@ -140,8 +156,10 @@ function barcodeScan() {
                         shareContainer.empty();
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
+                    // Porting this over to the JSON parser for nutrition
                     var container = parseNutritionInfo(response);
                     nutritionTable.empty();
+                    // And then utilizing the finished product
                     nutritionTable.append(container);
                     var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
                     cache_array.push(barcodeID);
@@ -184,10 +202,19 @@ function retrieveCache() {
     }
 }
 
+/**
+ * Simple. Clear the cache. Clear the localStorage array & empty the html element.
+ */
+
 function clearCache() {
     window.localStorage.clear('cachedScans');
     searchesTable.empty();
+    cordova.plugins.firebase.analytics.logEvent('cleared_scan_cache');
 }
+
+/**
+ * On click links in recent searches, run the ajax call again for a fresh data set
+ */
 
 function viewPreviousScan(barcodeID) {
     var group = '00001';
@@ -213,16 +240,41 @@ function viewPreviousScan(barcodeID) {
     });
 }
 
+/**
+ * Share Button Functionality
+ */
+
+function shareNutritionFacts() {
+    var options = {
+        message: jQuery('#nutritionTable').text(), // not supported on some apps (Facebook, Instagram)
+        subject: 'GFS Product: ' + jQuery('#itemDescriptionCode').text(), // fi. for email
+        chooserTitle: jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
+    };
+
+    function onSuccess(result) {
+        console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+        console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+    }
+
+    function onError(msg) {
+        console.log("Sharing failed with message: " + msg);
+    }
+
+    window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+}
+
+/**
+ * Some basic element variables for use in multiple elements
+ */
+
 var searchesTable = jQuery('#recentSearches');
 var shareContainer = jQuery('#shareContainer');
 
-function success() {
-    console.log('Camera permission granted');
-}
-
-function error() {
-    console.log('Camera permission denied');
-}
+/** Big Parse Function - receive the JSON and clean it up for use. Not using all variables but will keep them available JIC.
+ *
+ * @param response
+ * @returns {*}
+ */
 
 function parseNutritionInfo(response) {
 
@@ -449,11 +501,13 @@ function parseNutritionInfo(response) {
         vitaminKAmt = '0';
     }
 
+    // Not all of the above is useful either, so not including anything that wouldn't appear on a nutrition label
+
     // Setting the container variable
-    parsedNutritionContent = jQuery('<table class="nutrition-container" />');
+    parsedNutritionContent = jQuery('<table id="nutritionTable" class="nutrition-container" />');
 
     // Description
-    parsedNutritionContent.append('<tr class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');
+    parsedNutritionContent.append('<tr id="itemDescriptionCode" class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');
     // Serving Information
     parsedNutritionContent.append('<tr><td><strong>Serving Size</strong></td><td>' + servingSize +  ' (' + servingSizeUnit + ')</td></tr>');
     // Calories - Calories from Fat

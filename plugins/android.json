@@ -53,10 +53,16 @@
     },
     "cordova-support-google-services": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "es6-promise-plugin": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   }
