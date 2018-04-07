@@ -28,8 +28,9 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
+            // CORS support is vital for GET request to the API
             $.support.cors=true;
-            // barcodeScan();
+            barcodePreferences();
             retrieveCache();
             clickListen();
         });
@@ -52,6 +53,10 @@ var app = {
 
 };
 
+/**
+ * Let's keep it simple - storing all our listener functions here so we can trigger them with the device ready
+ */
+
 function clickListen() {
     jQuery('#scanButton').on('click', function() {
         barcodeScan();
@@ -67,10 +72,52 @@ function clickListen() {
         var barcodeID = barcodeElement.attr('data-id');
         viewPreviousScan(barcodeID);
     });
+    jQuery('#scannerCheckBox').change(function() {
+       preferenceCheckboxInteraction();
+    });
+    jQuery('#shareButton').on('click', function() {
+        shareNutritionFacts();
+    });
 }
 
 /**
- * Barcode Scanner Function
+ * Check the scanner preferences, if they aren't set we default to true, elsewise we are marking the html element with the user preferences they've set in localStorage
+ */
+
+function barcodePreferences() {
+    var checkBox = jQuery('#scannerCheckBox');
+    var scannerPreference = window.localStorage.getItem('scanPref');
+    if (scannerPreference != null) {
+        if(scannerPreference === 'true') {
+            checkBox.prop('checked', true);
+            barcodeScan();
+        }
+        else {
+            checkBox.prop('checked', false);
+        }
+    } else {
+        checkBox.prop('checked', true);
+        window.localStorage.setItem('scanPref', 'true');
+        barcodeScan();
+    }
+}
+
+/**
+ * Click action on checkbox, checking for true or false and setting the localStorage pref accordingly
+ */
+
+function preferenceCheckboxInteraction() {
+    var checkBox = jQuery('#scannerCheckBox');
+    setPreference = checkBox.is(":checked");
+    if (setPreference === true) {
+        window.localStorage.setItem('scanPref', 'true');
+    } else {
+        window.localStorage.setItem('scanPref', 'false');
+    }
+}
+
+/**
+ * Barcode Scanner Function coupled with the API GET
  */
 
 function barcodeScan() {
@@ -78,7 +125,7 @@ function barcodeScan() {
         function (result) {
             var nutritionTable = jQuery('#nutritionTable');
             var barcodeID = result.text;
-            // TODO: Retrieve group, language, and product codes dynamically or via user app settings.
+            // TODO: Retrieve group, language, and product codes dynamically or via user app settings eventually.
             var group = '00001';
             var language = 'eng';
             var productCodes = {
@@ -93,6 +140,7 @@ function barcodeScan() {
                 "93901411549": "411542",
                 "93901698254": "698250"
             };
+            // For some reason the codes received have an extra digit - we chop one off to deal with this
             var scannedID = barcodeID.slice(0,-1);
             barcodeID = productCodes[scannedID];
             $.ajax({
@@ -105,10 +153,13 @@ function barcodeScan() {
                     if (Object.keys(response).length === 0) {
                         nutritionTable.empty();
                         jQuery('#nutritionTable').append('<div class="nutrition-container"><h3>Hey! It looks like this isn\'t one of ours. We might be wrong though, feel free to try again!</h3></div>');
+                        shareContainer.empty();
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
+                    // Porting this over to the JSON parser for nutrition
                     var container = parseNutritionInfo(response);
                     nutritionTable.empty();
+                    // And then utilizing the finished product
                     nutritionTable.append(container);
                     var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
                     cache_array.push(barcodeID);
@@ -117,6 +168,8 @@ function barcodeScan() {
                     }
                     window.localStorage.setItem('cachedScans', JSON.stringify(cache_array));
                     retrieveCache();
+                    shareContainer.empty();
+                    shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
                     cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "true", id: barcodeID});
                 },
                 error: function() {
@@ -149,10 +202,19 @@ function retrieveCache() {
     }
 }
 
+/**
+ * Simple. Clear the cache. Clear the localStorage array & empty the html element.
+ */
+
 function clearCache() {
     window.localStorage.clear('cachedScans');
     searchesTable.empty();
+    cordova.plugins.firebase.analytics.logEvent('cleared_scan_cache');
 }
+
+/**
+ * On click links in recent searches, run the ajax call again for a fresh data set
+ */
 
 function viewPreviousScan(barcodeID) {
     var group = '00001';
@@ -168,6 +230,8 @@ function viewPreviousScan(barcodeID) {
             var container = parseNutritionInfo(response);
             nutritionTable.empty();
             nutritionTable.append(container);
+            shareContainer.empty();
+            shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
             cordova.plugins.firebase.analytics.logEvent("scan_retrieved", {valid: "true", id: barcodeID});
         },
         error: function() {
@@ -176,15 +240,41 @@ function viewPreviousScan(barcodeID) {
     });
 }
 
+/**
+ * Share Button Functionality
+ */
+
+function shareNutritionFacts() {
+    var options = {
+        message: jQuery('#nutritionTable').text(), // not supported on some apps (Facebook, Instagram)
+        subject: 'GFS Product: ' + jQuery('#itemDescriptionCode').text(), // fi. for email
+        chooserTitle: jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
+    };
+
+    function onSuccess(result) {
+        console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+        console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+    }
+
+    function onError(msg) {
+        console.log("Sharing failed with message: " + msg);
+    }
+
+    window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+}
+
+/**
+ * Some basic element variables for use in multiple elements
+ */
+
 var searchesTable = jQuery('#recentSearches');
+var shareContainer = jQuery('#shareContainer');
 
-function success() {
-    console.log('Camera permission granted');
-}
-
-function error() {
-    console.log('Camera permission denied');
-}
+/** Big Parse Function - receive the JSON and clean it up for use. Not using all variables but will keep them available JIC.
+ *
+ * @param response
+ * @returns {*}
+ */
 
 function parseNutritionInfo(response) {
 
@@ -381,6 +471,14 @@ function parseNutritionInfo(response) {
 
         parsedNutritionContent;
 
+    // Sometimes items with a zero value are returned as null rather than zero - this accounts for that
+
+    if(monoUnsaturatedFatAmt === null) {
+        monoUnsaturatedFatAmt = '0';
+    }
+    if(polyUnsaturatedFatAmt === null) {
+        polyUnsaturatedFatAmt = '0';
+    }
     if(vitaminAIUAmt === null) {
         vitaminAIUAmt = '0';
     }
@@ -403,11 +501,13 @@ function parseNutritionInfo(response) {
         vitaminKAmt = '0';
     }
 
+    // Not all of the above is useful either, so not including anything that wouldn't appear on a nutrition label
+
     // Setting the container variable
-    parsedNutritionContent = jQuery('<table class="nutrition-container" />');
+    parsedNutritionContent = jQuery('<table id="nutritionTable" class="nutrition-container" />');
 
     // Description
-    parsedNutritionContent.append('<tr class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');
+    parsedNutritionContent.append('<tr id="itemDescriptionCode" class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');
     // Serving Information
     parsedNutritionContent.append('<tr><td><strong>Serving Size</strong></td><td>' + servingSize +  ' (' + servingSizeUnit + ')</td></tr>');
     // Calories - Calories from Fat
@@ -420,9 +520,9 @@ function parseNutritionInfo(response) {
     //  Trans Fat
     parsedNutritionContent.append('<tr><td><strong>Trans Fat</strong></td><td>' + transFattyAcidAmt + transFattyAcidUnitOfMeasure + '</td></tr>');
     //  Mono Fat
-    parsedNutritionContent.append('<tr><td><strong>Monosaturated Fat</strong></td><td>' + monoUnsaturatedFatAmt + monoUnsaturatedFatUnitOfMeasure + '</td></tr>');
+    parsedNutritionContent.append('<tr><td><strong>Monounsaturated Fat</strong></td><td>' + monoUnsaturatedFatAmt + monoUnsaturatedFatUnitOfMeasure + '</td></tr>');
     //  Mono Fat
-    parsedNutritionContent.append('<tr><td><strong>Polysaturated Fat</strong></td><td>' + polyUnsaturatedFatAmt + polyUnsaturatedFatUnitOfMeasure + '</td></tr>');
+    parsedNutritionContent.append('<tr><td><strong>Polyunsaturated Fat</strong></td><td>' + polyUnsaturatedFatAmt + polyUnsaturatedFatUnitOfMeasure + '</td></tr>');
     // Cholesterol
     parsedNutritionContent.append('<tr><td><strong>Cholesterol</strong></td><td>' + cholesterolAmt + cholesterolUnitOfMeasure + '</td></tr>');
     // Sodium

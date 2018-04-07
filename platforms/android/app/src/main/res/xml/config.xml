@@ -61,6 +61,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <icon density="mdpi" src="www/res/icon/android/mipmap-mdpi/gfs_nutrition_laucher.png" />
     <icon density="hdpi" src="www/res/icon/android/mipmap-hdpi/gfs_nutrition_laucher.png" />
     <icon density="xhdpi" src="www/res/icon/android/mipmap-xhdpi/gfs_nutrition_laucher.png" />

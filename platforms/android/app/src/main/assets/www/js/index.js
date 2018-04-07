@@ -77,6 +77,7 @@ function clickListen() {
     });
     jQuery('#shareButton').on('click', function() {
         shareNutritionFacts();
+        console.log('Share clicked');
     });
 }
 
@@ -154,6 +155,7 @@ function barcodeScan() {
                         nutritionTable.empty();
                         jQuery('#nutritionTable').append('<div class="nutrition-container"><h3>Hey! It looks like this isn\'t one of ours. We might be wrong though, feel free to try again!</h3></div>');
                         shareContainer.empty();
+                        clickListen();
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
                     // Porting this over to the JSON parser for nutrition
@@ -161,6 +163,7 @@ function barcodeScan() {
                     nutritionTable.empty();
                     // And then utilizing the finished product
                     nutritionTable.append(container);
+                    clickListen();
                     var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
                     cache_array.push(barcodeID);
                     if (cache_array.length > 5) {
@@ -169,7 +172,8 @@ function barcodeScan() {
                     window.localStorage.setItem('cachedScans', JSON.stringify(cache_array));
                     retrieveCache();
                     shareContainer.empty();
-                    shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
+                    shareContainer.append('<div id="shareButton" class="button button-share-result">Share This</div>');
+                    clickListen();
                     cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "true", id: barcodeID});
                 },
                 error: function() {
@@ -198,6 +202,7 @@ function retrieveCache() {
         var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
         jQuery(cache_array.reverse()).each(function(){
             searchesTable.append('<div class="button-retrieve-scan" data-id="' + this +'" >'+ this +'</div>');
+            clickListen();
         });
     }
 }
@@ -231,7 +236,8 @@ function viewPreviousScan(barcodeID) {
             nutritionTable.empty();
             nutritionTable.append(container);
             shareContainer.empty();
-            shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
+            shareContainer.append('<div id="shareButton" class="button button-share-result">Share This</div>');
+            clickListen();
             cordova.plugins.firebase.analytics.logEvent("scan_retrieved", {valid: "true", id: barcodeID});
         },
         error: function() {
@@ -242,18 +248,20 @@ function viewPreviousScan(barcodeID) {
 
 /**
  * Share Button Functionality
+ * TODO: Format the resulting text/email better. Right now we are just taking a snapshot of the container contents.
  */
 
 function shareNutritionFacts() {
     var options = {
         message: jQuery('#nutritionTable').text(), // not supported on some apps (Facebook, Instagram)
         subject: 'GFS Product: ' + jQuery('#itemDescriptionCode').text(), // fi. for email
-        chooserTitle: jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
+        chooserTitle: 'GFS Product: ' + jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
     };
 
     function onSuccess(result) {
         console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
         console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+        cordova.plugins.firebase.analytics.logEvent("shared_nutrition_facts");
     }
 
     function onError(msg) {
@@ -546,6 +554,8 @@ function parseNutritionInfo(response) {
 
     // Allergy Information
     // TODO: Allergy Information
+
+    clickListen();
 
     return parsedNutritionContent;
 }

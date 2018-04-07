@@ -4,23 +4,6 @@
             "outputFile": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-mk/values-mk.xml",
             "map": [
                 {
-                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/values-mk/values-mk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "301",
-                        "endColumns": "100",
-                        "endOffsets": "397"
-                    }
-                },
-                {
                     "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/eaf702e17d775d447cca551daaec396a/res/values-mk/values.xml",
                     "from": {
                         "startLines": "4",
@@ -35,6 +18,23 @@
                         "startOffsets": "105",
                         "endColumns": "195",
                         "endOffsets": "296"
+                    }
+                },
+                {
+                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/values-mk/values-mk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "301",
+                        "endColumns": "100",
+                        "endOffsets": "397"
                     }
                 }
             ]

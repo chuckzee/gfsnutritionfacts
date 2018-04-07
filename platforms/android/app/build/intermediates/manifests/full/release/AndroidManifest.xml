@@ -86,6 +86,16 @@
             android:name="com.google.zxing.client.android.encode.EncodeActivity"
             android:label="Share" />
 
+        <provider
+            android:name="nl.xservices.plugins.FileProvider"
+            android:authorities="com.phonegap.gfsnutrition.sharing.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/sharing_paths" />
+        </provider>
+
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"

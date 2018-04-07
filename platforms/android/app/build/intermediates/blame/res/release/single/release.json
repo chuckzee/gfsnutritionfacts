@@ -1,7 +1,7 @@
 [
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_lines_media.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_lines_media.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_share_via_barcode.png.flat",
@@ -17,7 +17,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_next_item.png.flat",
@@ -29,11 +29,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-v16_notification_template_custom_big.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout-v16/notification_template_custom_big.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout-v16/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout-v21/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_flip_camera.png.flat",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/xml_preferences.xml.flat",
@@ -60,28 +60,28 @@
         "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/barcodescanner-release-2.1.5.aar/9bb26aa131e0ce1e91e73d04ff8c4328/res/menu/history.xml"
     },
     {
-        "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_media_action.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_media_action.xml"
+        "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_action.xml.flat",
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout/notification_action.xml"
     },
     {
-        "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_action.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout/notification_action.xml"
+        "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_media_action.xml.flat",
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_media_cancel_action.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_media_cancel_action.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_big_media_narrow.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_big_media_narrow.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_help.xml.flat",
@@ -97,15 +97,15 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_remove.png.flat",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_icon_group.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout/notification_template_icon_group.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_previous_item.png.flat",
@@ -141,11 +141,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_notification_icon_background.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable/notification_icon_background.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-v21_notification_action_background.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-v21/notification_action_background.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/xml_provider_paths.xml.flat",
@@ -157,11 +157,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_notification_tile_bg.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable/notification_tile_bg.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-v21_notification_action.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout-v21/notification_action.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi_launcher_icon.png.flat",
@@ -169,7 +169,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_media.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_media.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/menu_encode.xml.flat",
@@ -181,7 +181,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_action_tombstone.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout/notification_action_tombstone.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout/notification_action_tombstone.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_action_next_item.png.flat",
@@ -193,7 +193,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_icon.png.flat",
@@ -201,7 +201,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_part_time.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout/notification_template_part_time.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_icon.png.flat",
@@ -233,23 +233,27 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_part_chronometer.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/layout/notification_template_part_chronometer.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/xml_sharing_paths.xml.flat",
+        "source": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/src/main/res/xml/sharing_paths.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-land-xhdpi_screen.png.flat",
@@ -257,7 +261,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_launcher_icon.png.flat",
@@ -269,11 +273,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/raw_beep.ogg.flat",
@@ -281,11 +285,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_notification_bg_low.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable/notification_bg_low.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_media_custom.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_media_custom.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-land_share.xml.flat",
@@ -293,7 +297,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_notification_bg.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable/notification_bg.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_action_remove.png.flat",
@@ -301,7 +305,7 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_big_media_custom.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_big_media_custom.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_action_remove.png.flat",
@@ -309,11 +313,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_big_media.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_big_media.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable_toggle_torch.png.flat",
@@ -361,11 +365,11 @@
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/layout/notification_template_big_media_narrow_custom.xml"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c91bd57b00f7bc327d06c700556d124c/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/res/merged/release/layout-ldpi_capture.xml.flat",

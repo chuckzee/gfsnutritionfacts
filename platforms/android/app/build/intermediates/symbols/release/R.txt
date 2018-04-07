@@ -391,3 +391,4 @@ int styleable FontFamilyFont_fontWeight 5
 int xml config 0x7f100000
 int xml preferences 0x7f100001
 int xml provider_paths 0x7f100002
+int xml sharing_paths 0x7f100003

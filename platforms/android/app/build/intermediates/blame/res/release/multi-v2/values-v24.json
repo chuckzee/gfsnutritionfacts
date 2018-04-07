@@ -4,7 +4,7 @@
             "outputFile": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/c2992b2c0afa0e2fb405ebccfb03292f/res/values-v24/values-v24.xml",
+                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/caa3f82e9fa4480a32c832c15f8a4690/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
