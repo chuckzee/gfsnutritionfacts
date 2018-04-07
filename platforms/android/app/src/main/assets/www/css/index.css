@@ -63,6 +63,9 @@ a {
   cursor: pointer;
   text-shadow: none; }
 
+.button-share-result {
+  visibility: hidden; }
+
 .button-share-result,
 a.ui-link.button {
   background-color: #2b5a87;
@@ -101,7 +104,11 @@ a.ui-link.button {
 .button-retrieve-scan {
   cursor: pointer;
   text-decoration: underline;
-  color: #2b5a87; }
+  color: #2b5a87;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0); }
+  .button-retrieve-scan:focus {
+    outline: hidden; }
 
 #scannerCheckBox {
   display: inline-block;

@@ -63,22 +63,31 @@ a {
   cursor: pointer;
   text-shadow: none; }
 
+.button-share-result {
+  visibility: hidden; }
+
+.button-share-result,
 a.ui-link.button {
   background-color: #2b5a87;
+  display: inline-block;
   padding: 8px 12px;
   border-radius: 2px;
   color: white;
   font-weight: bold;
   font-size: 12px;
   transition: .2s ease all; }
+  .button-share-result:hover,
   a.ui-link.button:hover {
     color: white;
     background-color: #31679a;
     transition: .2s ease all; }
+  .button-share-result:active,
   a.ui-link.button:active {
     color: white; }
+  .button-share-result:visited,
   a.ui-link.button:visited {
     color: white; }
+  .button-share-result:active,
   a.ui-link.button:active {
     color: white; }
 
@@ -159,6 +168,9 @@ div.ui-page-active {
 
 #recentSearches {
   margin-bottom: 12px; }
+
+#shareContainer {
+  margin-bottom: 1em; }
 
 .preferences-box {
   position: relative;

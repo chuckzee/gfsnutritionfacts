@@ -963,5 +963,6 @@ public final class R {
     public static final int config=0x7f100000;
     public static final int preferences=0x7f100001;
     public static final int provider_paths=0x7f100002;
+    public static final int sharing_paths=0x7f100003;
   }
 }

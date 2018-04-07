@@ -28,6 +28,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
+            jQuery('#shareButton').css('visibility','hidden');
             // CORS support is vital for GET request to the API
             $.support.cors=true;
             barcodePreferences();
@@ -77,6 +78,7 @@ function clickListen() {
     });
     jQuery('#shareButton').on('click', function() {
         shareNutritionFacts();
+        console.log('Share clicked');
     });
 }
 
@@ -124,6 +126,7 @@ function barcodeScan() {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
             var nutritionTable = jQuery('#nutritionTable');
+            nutritionTable.empty();
             var barcodeID = result.text;
             // TODO: Retrieve group, language, and product codes dynamically or via user app settings eventually.
             var group = '00001';
@@ -153,7 +156,7 @@ function barcodeScan() {
                     if (Object.keys(response).length === 0) {
                         nutritionTable.empty();
                         jQuery('#nutritionTable').append('<div class="nutrition-container"><h3>Hey! It looks like this isn\'t one of ours. We might be wrong though, feel free to try again!</h3></div>');
-                        shareContainer.empty();
+                        jQuery('#shareButton').css('visibility','hidden');
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
                     // Porting this over to the JSON parser for nutrition
@@ -168,8 +171,7 @@ function barcodeScan() {
                     }
                     window.localStorage.setItem('cachedScans', JSON.stringify(cache_array));
                     retrieveCache();
-                    shareContainer.empty();
-                    shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
+                    jQuery('#shareButton').css('visibility','visible');
                     cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "true", id: barcodeID});
                 },
                 error: function() {
@@ -227,11 +229,10 @@ function viewPreviousScan(barcodeID) {
         },
         success: function(response) {
             var nutritionTable = jQuery('#nutritionTable');
-            var container = parseNutritionInfo(response);
             nutritionTable.empty();
+            var container = parseNutritionInfo(response);
             nutritionTable.append(container);
-            shareContainer.empty();
-            shareContainer.append('<div id="shareButton" class="button-share-result">Share This</div>');
+            jQuery('#shareButton').css('visibility','visible');
             cordova.plugins.firebase.analytics.logEvent("scan_retrieved", {valid: "true", id: barcodeID});
         },
         error: function() {
@@ -242,18 +243,20 @@ function viewPreviousScan(barcodeID) {
 
 /**
  * Share Button Functionality
+ * TODO: Format the resulting text/email better. Right now we are just taking a snapshot of the container contents.
  */
 
 function shareNutritionFacts() {
     var options = {
         message: jQuery('#nutritionTable').text(), // not supported on some apps (Facebook, Instagram)
         subject: 'GFS Product: ' + jQuery('#itemDescriptionCode').text(), // fi. for email
-        chooserTitle: jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
+        chooserTitle: 'GFS Product: ' + jQuery('#itemDescriptionCode').text() // Android only, you can override the default share sheet title
     };
 
     function onSuccess(result) {
         console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
         console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+        cordova.plugins.firebase.analytics.logEvent("shared_nutrition_facts");
     }
 
     function onError(msg) {
@@ -504,7 +507,7 @@ function parseNutritionInfo(response) {
     // Not all of the above is useful either, so not including anything that wouldn't appear on a nutrition label
 
     // Setting the container variable
-    parsedNutritionContent = jQuery('<table id="nutritionTable" class="nutrition-container" />');
+    parsedNutritionContent = jQuery('<table id="nutritionContainer" class="nutrition-container" />');
 
     // Description
     parsedNutritionContent.append('<tr id="itemDescriptionCode" class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');

@@ -8,6 +8,10 @@ a {
   text-shadow: none;
 }
 
+.button-share-result {
+  visibility: hidden;
+}
+
 .button-share-result,
 a.ui-link.button {
   background-color: $gordon-blue;
@@ -49,6 +53,11 @@ a.ui-link.button {
   cursor: pointer;
   text-decoration: underline;
   color: $gordon-blue;
+  border: 0;
+  background-color: rgba(255,255,255,0);
+  &:focus {
+    outline: hidden;
+  }
 }
 
 #scannerCheckBox {

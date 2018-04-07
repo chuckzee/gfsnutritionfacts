@@ -28,6 +28,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener('deviceready', function() {
+            jQuery('#shareButton').css('visibility','hidden');
             // CORS support is vital for GET request to the API
             $.support.cors=true;
             barcodePreferences();
@@ -66,11 +67,6 @@ function clickListen() {
     });
     jQuery('#clearCache').on('click', function() {
         clearCache();
-    });
-    jQuery('.button-retrieve-scan').on('click', function() {
-        var barcodeElement = jQuery(this);
-        var barcodeID = barcodeElement.attr('data-id');
-        viewPreviousScan(barcodeID);
     });
     jQuery('#scannerCheckBox').change(function() {
        preferenceCheckboxInteraction();
@@ -125,6 +121,7 @@ function barcodeScan() {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
             var nutritionTable = jQuery('#nutritionTable');
+            nutritionTable.empty();
             var barcodeID = result.text;
             // TODO: Retrieve group, language, and product codes dynamically or via user app settings eventually.
             var group = '00001';
@@ -154,8 +151,7 @@ function barcodeScan() {
                     if (Object.keys(response).length === 0) {
                         nutritionTable.empty();
                         jQuery('#nutritionTable').append('<div class="nutrition-container"><h3>Hey! It looks like this isn\'t one of ours. We might be wrong though, feel free to try again!</h3></div>');
-                        shareContainer.empty();
-                        clickListen();
+                        jQuery('#shareButton').css('visibility','hidden');
                         cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "false", id: scannedID});
                     }
                     // Porting this over to the JSON parser for nutrition
@@ -163,7 +159,6 @@ function barcodeScan() {
                     nutritionTable.empty();
                     // And then utilizing the finished product
                     nutritionTable.append(container);
-                    clickListen();
                     var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
                     cache_array.push(barcodeID);
                     if (cache_array.length > 5) {
@@ -171,9 +166,7 @@ function barcodeScan() {
                     }
                     window.localStorage.setItem('cachedScans', JSON.stringify(cache_array));
                     retrieveCache();
-                    shareContainer.empty();
-                    shareContainer.append('<div id="shareButton" class="button button-share-result">Share This</div>');
-                    clickListen();
+                    jQuery('#shareButton').css('visibility','visible');
                     cordova.plugins.firebase.analytics.logEvent("barcode_scanned", {valid: "true", id: barcodeID});
                 },
                 error: function() {
@@ -200,9 +193,23 @@ function retrieveCache() {
     } else {
         searchesTable.empty();
         var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
+        var group = '00001';
+        var language = 'eng';
         jQuery(cache_array.reverse()).each(function(){
-            searchesTable.append('<div class="button-retrieve-scan" data-id="' + this +'" >'+ this +'</div>');
-            clickListen();
+          var barcodeID = this;
+          $.ajax({
+                url: 'https://api.gfs.com/ordering/rest/nutritionService/getNutritionInfo?offeringId=' + barcodeID + '&offeringGroupId=' + group + '&languageTypeCode=' + language,
+                type: 'GET',
+                data: {
+                    format: 'json'
+                },
+                success: function(response) {
+                    searchesTable.append('<button onclick="viewPreviousScan(' + barcodeID + ')" class="button-retrieve-scan" data-id="' + barcodeID +'" >'+ response[0].itemDesc +'</button><br/>');
+                },
+                error: function() {
+                    alert('Error');
+                }
+            });
         });
     }
 }
@@ -232,12 +239,10 @@ function viewPreviousScan(barcodeID) {
         },
         success: function(response) {
             var nutritionTable = jQuery('#nutritionTable');
-            var container = parseNutritionInfo(response);
             nutritionTable.empty();
+            var container = parseNutritionInfo(response);
             nutritionTable.append(container);
-            shareContainer.empty();
-            shareContainer.append('<div id="shareButton" class="button button-share-result">Share This</div>');
-            clickListen();
+            jQuery('#shareButton').css('visibility','visible');
             cordova.plugins.firebase.analytics.logEvent("scan_retrieved", {valid: "true", id: barcodeID});
         },
         error: function() {
@@ -512,7 +517,7 @@ function parseNutritionInfo(response) {
     // Not all of the above is useful either, so not including anything that wouldn't appear on a nutrition label
 
     // Setting the container variable
-    parsedNutritionContent = jQuery('<table id="nutritionTable" class="nutrition-container" />');
+    parsedNutritionContent = jQuery('<table id="nutritionContainer" class="nutrition-container" />');
 
     // Description
     parsedNutritionContent.append('<tr id="itemDescriptionCode" class="title-row"><td colspan="2"><h3>' + itemDesc + ' ('+ itemCode + ')</h3></td></tr>');
@@ -554,8 +559,6 @@ function parseNutritionInfo(response) {
 
     // Allergy Information
     // TODO: Allergy Information
-
-    clickListen();
 
     return parsedNutritionContent;
 }

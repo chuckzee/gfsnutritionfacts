@@ -8,8 +8,14 @@ a {
   text-shadow: none;
 }
 
+.button-share-result {
+  visibility: hidden;
+}
+
+.button-share-result,
 a.ui-link.button {
   background-color: $gordon-blue;
+  display: inline-block;
   padding: 8px 12px;
   border-radius: 2px;
   color: white;
