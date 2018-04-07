@@ -4,23 +4,6 @@
             "outputFile": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-te/values-te.xml",
             "map": [
                 {
-                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/e669b0a7f8ee733cefbf24da0fb1de5f/res/values-te/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,353,539,667,780,976,1099,1230,1355,1563,1673,1857,1983,2193,2382,2472,2566",
-                        "endColumns": "107,185,127,112,195,122,130,124,207,109,183,125,209,188,89,93,106",
-                        "endOffsets": "352,538,666,779,975,1098,1229,1354,1562,1672,1856,1982,2192,2381,2471,2565,2672"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,217,403,535,652,848,975,1110,1438,1646,1760,1944,2074,2284,2477,2571,2669",
-                        "endColumns": "111,185,131,116,195,126,134,128,207,113,183,129,209,192,93,97,110",
-                        "endOffsets": "212,398,530,647,843,970,1105,1234,1641,1755,1939,2069,2279,2472,2566,2664,2775"
-                    }
-                },
-                {
                     "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/values-te/values-te.xml",
                     "from": {
                         "startLines": "2",
@@ -30,45 +13,28 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "21",
+                        "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "2885",
+                        "startOffsets": "304",
                         "endColumns": "100",
-                        "endOffsets": "2981"
+                        "endOffsets": "400"
                     }
                 },
                 {
-                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/c6ce007190381a7e8214dcfe9a91cf5e/res/values-te/values.xml",
+                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/eaf702e17d775d447cca551daaec396a/res/values-te/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "247",
+                        "startOffsets": "285",
                         "endColumns": "198",
-                        "endOffsets": "445"
+                        "endOffsets": "483"
                     },
                     "to": {
-                        "startLines": "10",
+                        "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "1239",
+                        "startOffsets": "105",
                         "endColumns": "198",
-                        "endOffsets": "1433"
-                    }
-                },
-                {
-                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/firebase-messaging-12.0.1.aar/403c2b6cbad85940d07d10fbdca9e358/res/values-te/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "100",
-                        "endOffsets": "305"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2780",
-                        "endColumns": "104",
-                        "endOffsets": "2880"
+                        "endOffsets": "299"
                     }
                 }
             ]

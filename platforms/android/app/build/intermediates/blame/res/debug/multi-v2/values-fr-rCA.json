@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/chuckzee/Sites/gfsdeatails/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "map": [
+                {
+                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/eaf702e17d775d447cca551daaec396a/res/values-fr-rCA/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "289",
+                        "endColumns": "219",
+                        "endOffsets": "508"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "219",
+                        "endOffsets": "320"
+                    }
+                },
+                {
+                    "source": "/home/chuckzee/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/5d2e7aa2f9e2eaf45ddb953a1e79402d/res/values-fr-rCA/values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "325",
+                        "endColumns": "100",
+                        "endOffsets": "421"
+                    }
+                }
+            ]
+        }
+    ]
+}

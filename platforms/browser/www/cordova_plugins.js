@@ -379,11 +379,11 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-firebase-sdk/www/index.js",
-        "id": "cordova-plugin-firebase-sdk.Firebase",
-        "pluginId": "cordova-plugin-firebase-sdk",
-        "clobbers": [
-            "firebase"
+        "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
+        "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
+        "pluginId": "cordova-plugin-firebase-analytics",
+        "merges": [
+            "cordova.plugins.firebase.analytics"
         ]
     }
 ];
@@ -401,7 +401,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-camera": "4.0.2",
     "phonegap-plugin-barcodescanner": "7.1.0",
-    "cordova-plugin-firebase-sdk": "0.0.1"
+    "cordova-plugin-firebase-analytics": "0.13.0",
+    "cordova-support-google-services": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

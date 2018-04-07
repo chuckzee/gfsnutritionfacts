@@ -37,7 +37,10 @@
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-firebase-sdk": {
+    "cordova-plugin-firebase-analytics": {
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "cordova-support-google-services": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   },

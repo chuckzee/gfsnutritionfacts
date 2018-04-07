@@ -238,14 +238,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-firebase-sdk.Firebase",
-    "file": "plugins/cordova-plugin-firebase-sdk/www/index.js",
-    "pluginId": "cordova-plugin-firebase-sdk",
-    "clobbers": [
-      "firebase"
-    ]
-  },
-  {
     "id": "cordova-plugin-geolocation.geolocation",
     "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
     "pluginId": "cordova-plugin-geolocation",
@@ -273,15 +265,6 @@ module.exports = [
     "pluginId": "cordova-plugin-globalization",
     "clobbers": [
       "navigator.globalization"
-    ]
-  },
-  {
-    "id": "cordova-plugin-google-analytics.UniversalAnalytics",
-    "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
-    "pluginId": "cordova-plugin-google-analytics",
-    "clobbers": [
-      "analytics",
-      "ga"
     ]
   },
   {
@@ -418,6 +401,14 @@ module.exports = [
     "clobbers": [
       "cordova.plugins.barcodeScanner"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
+    "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
+    "pluginId": "cordova-plugin-firebase-analytics",
+    "merges": [
+      "cordova.plugins.firebase.analytics"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -428,17 +419,17 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.7",
   "cordova-plugin-dialogs": "1.3.4",
   "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-firebase-sdk": "0.0.1",
   "cordova-plugin-geolocation": "2.4.3",
   "cordova-plugin-globalization": "1.0.9",
-  "cordova-plugin-google-analytics": "1.8.3",
   "cordova-plugin-inappbrowser": "1.7.2",
   "cordova-plugin-media-capture": "3.0.1",
   "cordova-plugin-nativestorage": "2.3.1",
   "cordova-plugin-network-information": "1.3.4",
   "cordova-plugin-vibration": "2.1.6",
   "cordova-plugin-whitelist": "1.1.0",
-  "phonegap-plugin-barcodescanner": "7.1.0"
+  "phonegap-plugin-barcodescanner": "7.1.0",
+  "cordova-support-google-services": "1.1.0",
+  "cordova-plugin-firebase-analytics": "0.13.0"
 };
 // BOTTOM OF METADATA
 });

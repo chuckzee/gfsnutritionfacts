@@ -54,19 +54,28 @@
 		</style>
     <title>Gordon Food Service</title>
 </head>
-
 <body>
     <div class="app">
-        <h1 class="page-title">Gordon <span>Food Service</span></h1>
-        <div id="deviceready" class="blink">
-            <button id="scanButton">Scan</button>
-            <button id="retrieveCache">Retrieve Cache</button>
-            <button id="clearCache">Clear Cache</button>
-            <div id="recentSearches">
-
+        <div class="header-bar">
+            <h1 class="page-title">GFS Nutrition Details</h1>
+            <div class="button button-scan" id="scanButton">
+                <img class="scanner-button" src="img/barcode-512.png" />
             </div>
-            <div id="nutritionTable">
-
+        </div>
+        <div id="deviceready">
+            <div class="preferences-box">
+                Open scanner on initial app load: checkbox
+            </div>
+            <div class="nutrition-container">
+                <h3>Nutrition Facts</h3>
+                <div id="nutritionTable">
+                    <p>It looks like you haven't scanned anything yet. You can start a scan by tapping the button in the top right, or you can tap one of your recent scans below.</p>
+                </div>
+            </div>
+            <div class="recent-search-container">
+                <h3>Your Recent Scans:</h3>
+                <div id="recentSearches"></div>
+                <a class="button" id="clearCache">Clear Cache</a>
             </div>
         </div>
     </div>
@@ -85,5 +94,4 @@
         app.initialize();
     </script>
 </body>
-
 </html>

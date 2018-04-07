@@ -119,10 +119,20 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase-sdk": {
+  "cordova-plugin-firebase-analytics": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase-sdk"
+      "id": "cordova-plugin-firebase-analytics"
+    },
+    "is_top_level": true,
+    "variables": {
+      "FIREBASE_VERSION": "11.6.+"
+    }
+  },
+  "cordova-support-google-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-google-services@^1.1.0"
     },
     "is_top_level": true,
     "variables": {}

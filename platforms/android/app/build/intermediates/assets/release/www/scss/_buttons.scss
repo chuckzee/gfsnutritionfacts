@@ -1,3 +1,49 @@
 a {
-  color: red;
+  color: $gordon-red;
+}
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.ui-link.button {
+  background-color: $gordon-blue;
+  padding: 8px 12px;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  transition: .2s ease all;
+  &:hover {
+    color: white;
+    background-color: lighten($gordon-blue, 5%);
+    transition: .2s ease all;
+  }
+  &:active {
+    color: white;
+  }
+  &:visited {
+    color: white;
+  }
+  &:active {
+    color: white;
+  }
+}
+
+.button-scan {
+  right: .9em;
+  top: .8em;
+  float: right;
+  position: absolute;
+  background-color: white;
+  padding: .1em .25em;
+  border-radius: 100%;
+  box-shadow: inset 0 1px 0 #eee, 0 3px 0 0 #a0a0a0;
+}
+
+.button-retrieve-scan {
+  cursor: pointer;
+  text-decoration: underline;
+  color: $gordon-blue;
 }

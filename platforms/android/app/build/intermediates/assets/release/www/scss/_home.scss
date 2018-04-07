@@ -1,7 +1,50 @@
-.app {
-
+div.ui-page-active {
+  background-color: rgba(0,0,0,0);
 }
 
-.ui-page {
-  background:url('../img/chef-cooking-dinner-66639.jpg') no-repeat center left;
+.recent-search-container {
+  background-color: white;
+  padding: 1em;
+}
+
+.nutrition-container {
+  background-color: white;
+  padding: 1em;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  tr {
+    border-bottom: 1px solid black;
+  }
+  td {
+    width: 49.5%;
+    margin: 0 0;
+    padding: .25em;
+  }
+  tr td:nth-of-type(2) {
+    text-align: right;
+  }
+  .title-row {
+    text-align: center;
+  }
+  .vitamin-row {
+
+  }
+  .ingredients-row {
+    font-style: italic;
+  }
+}
+
+#nutritionTable {
+  padding: 0 0;
+  margin: 0 0;
+  border: 1px solid black;
+  border-radius: 4px;
+  h1, h2, h3, h4, h5 {
+    padding: 0 0;
+    margin: 0 0;
+  }
+}
+
+#recentSearches {
+  margin-bottom: 12px;
 }

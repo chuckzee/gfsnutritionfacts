@@ -19,9 +19,6 @@
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     },
-    "cordova-plugin-firebase-sdk": {
-      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
-    },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     },
@@ -48,6 +45,13 @@
     },
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "cordova-plugin-firebase-analytics": {
+      "FIREBASE_VERSION": "11.6.+",
+      "PACKAGE_NAME": "com.phonegap.gfsnutrition"
+    },
+    "cordova-support-google-services": {
       "PACKAGE_NAME": "com.phonegap.gfsnutrition"
     }
   },
