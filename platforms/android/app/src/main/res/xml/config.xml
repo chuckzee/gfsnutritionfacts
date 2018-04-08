@@ -67,12 +67,12 @@
     <icon density="xhdpi" src="www/res/icon/android/mipmap-xhdpi/gfs_nutrition_laucher.png" />
     <icon density="xxhdpi" src="www/res/icon/android/mipmap-xxhdpi/gfs_nutrition_laucher.png" />
     <icon density="xxxhdpi" src="www/res/icon/android/mipmap-xxxhdpi/gfs_nutrition_laucher.png" />
-    <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
-    <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
-    <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
-    <splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
-    <splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
-    <splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
+    <splash density="land-ldpi" src="www/res/screen/android/barcode-512.png" />
+    <splash density="land-mdpi" src="www/res/screen/android/barcode-512.png" />
+    <splash density="land-hdpi" src="www/res/screen/android/barcode-512.png" />
+    <splash density="land-xhdpi" src="www/res/screen/android/barcode-512.png" />
+    <splash density="land-xxhdpi" src="www/res/screen/android/barcode-512.png" />
+    <splash density="land-xxxhdpi" src="www/res/screen/android/barcode-512.png" />
     <splash density="port-ldpi" src="www/res/screen/android/barcode-512.png" />
     <splash density="port-mdpi" src="www/res/screen/android/barcode-512.png" />
     <splash density="port-hdpi" src="www/res/screen/android/barcode-512.png" />

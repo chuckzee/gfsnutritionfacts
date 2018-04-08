@@ -68,11 +68,6 @@ function clickListen() {
     jQuery('#clearCache').on('click', function() {
         clearCache();
     });
-    jQuery('.button-retrieve-scan').on('click', function() {
-        var barcodeElement = jQuery(this);
-        var barcodeID = barcodeElement.attr('data-id');
-        viewPreviousScan(barcodeID);
-    });
     jQuery('#scannerCheckBox').change(function() {
        preferenceCheckboxInteraction();
     });
@@ -198,8 +193,23 @@ function retrieveCache() {
     } else {
         searchesTable.empty();
         var cache_array = JSON.parse(window.localStorage.getItem('cachedScans')) || [];
+        var group = '00001';
+        var language = 'eng';
         jQuery(cache_array.reverse()).each(function(){
-            searchesTable.append('<div class="button-retrieve-scan" data-id="' + this +'" >'+ this +'</div>');
+          var barcodeID = this;
+          $.ajax({
+                url: 'https://api.gfs.com/ordering/rest/nutritionService/getNutritionInfo?offeringId=' + barcodeID + '&offeringGroupId=' + group + '&languageTypeCode=' + language,
+                type: 'GET',
+                data: {
+                    format: 'json'
+                },
+                success: function(response) {
+                    searchesTable.append('<button onclick="viewPreviousScan(' + barcodeID + ')" class="button-retrieve-scan" data-id="' + barcodeID +'" >'+ response[0].itemDesc +'</button><br/>');
+                },
+                error: function() {
+                    alert('Error');
+                }
+            });
         });
     }
 }

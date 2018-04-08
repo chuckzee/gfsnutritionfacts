@@ -1,69 +1,51 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# GFS Nutrition Facts
 
-A PhoneGap Hello World template
+A Cordova application developed to present users with relevant GFS Nutrition Facts
 
 ## Usage
 
-#### PhoneGap CLI
+The app can be staged in a browser, Android, or iOS. The root www environment is browser-friendly, while other platforms are delegated to the platforms directory. For instance, platforms/android/ is where we build and compile the apk.
 
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
+This app will scan barcodes and cross reference them with provided GFS known barcodes and product ids. Once it finds a valid code, an API call is made to the GFS service and returns a Nutriton Facts table, formatted for legibility. 
 
-    phonegap create my-app
+Users can then share these results via text, social media, email, or whatever their preferred (and allowed) preference is on their mobile device.
 
-Create an app using this template specifically:
+#### Android app installation
 
-    phonegap create my-app --template hello-world
+If you would like to install the developer version of this app, please click here: [app-release.apk](https://github.com/chuckzee/gfsnutritionfacts/blob/master/platforms/android/app/release/app-release.apk)
 
-To see a list of other available PhoneGap templates:
+NOTE: This application was tested in a browser and on Android 8.1 (Google Pixel XL). User experience on other platforms not guaranteed, and not all features are present on the browser version of the application - barcode scanning via camera, social sharing, etc. 
 
-    phonegap template list
+## Technologies
 
-## [config.xml][config-xml]
+#### Cordova
 
-#### android-minSdkVersion (Android only)
+GFS Nutrition facts was built using [Cordova](https://cordova.apache.org/), an open source mobile framework where web stack development can occur and then be ported out to various devices and operating systems, including Android, Blackberry, iOS, OSX, Ubuntu, Windows, and WP8.
 
-Minimum SDK version supported on the target device. Maximum version is blank by default.
+Documentation for Cordova is available [here](https://cordova.apache.org/docs/en/latest/).
 
-This template sets the minimum to `14`.
+#### Phonegap CLI
 
-    <preference name="android-minSdkVersion" value="14" />
+It is recommended to install [Phonegap CLI](http://docs.phonegap.com/references/phonegap-cli/) globally via [npm](https://www.npmjs.com/) in order to continue development on this application. Phonegap was developed by Adobe as a means to build and compile Cordova applications, as well as run local development environments. 
 
-#### &lt;access ...&gt; (All)
+Adobe's [Phonegap Build](https://build.phonegap.com/) service can be utilized, but for Android specifically I found fewer issues when compiling with Android Studio instead. 
 
-This template defaults to wide open access.
+Phonegap CLI can serve the application, and will provide a URL to access it by. You can then install the Phonegap application on your mobile device, which can access the served application. In this way, development can happen simultaneously on multiple devices. 
 
-    <access origin="*" />
+#### Gulp and Sass
 
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
+A gulpfile is located in the www directory for continued local development. For the time being it is quite simple, and only includes a sass preprocessor and a watch process. In the future, minification and compression for various front end resources is recommended. 
 
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
+After [installing gulp via npm](https://gulpjs.com/), you can begin local development with gulp sass:watch in the cli. 
 
-## [www/index.html][index-html]
+## Cordova Packages in use
 
-#### Content Security Policy (CSP)
+* Cordova Camera Plugin (Camera usage and access)
+* Cordova Firebase Analytics (Analytics, action reporting, usage statistics)
+* Cordova x Social Sharing (Sharing functionality and compatibility on various devices)
+* Cordova Google Support Services (Dependency for Firebase)
+* Cordova Barcodescanner (Barcode parsing)
 
-The default CSP is similarly open:
+#### Config
 
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
-
-
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
+[config.xml](https://github.com/chuckzee/gfsnutritionfacts/blob/master/config.xml) in the root directory contains build information on the cordova plugin npm packages. If version updates need to occur, or plugins need to be removed or added, this is where this can occur. These functions can also occur via the phonegap cli.

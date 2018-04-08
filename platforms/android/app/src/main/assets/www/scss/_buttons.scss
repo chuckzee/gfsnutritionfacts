@@ -1,3 +1,5 @@
+// General Button Styles
+
 a {
   color: $gordon-red;
 }
@@ -7,6 +9,8 @@ a {
   cursor: pointer;
   text-shadow: none;
 }
+
+// Specific Button Styles
 
 .button-share-result {
   visibility: hidden;
@@ -60,11 +64,16 @@ a.ui-link.button {
   }
 }
 
-#scannerCheckBox {
+.ui-checkbox input.scanner-preference-checkbox {
   display: inline-block;
   position: relative;
   margin: 0 0;
   padding: 0 0;
   width: 12px;
   height: 12px;
+}
+
+.scanner-button {
+  width: 50px;
+  height: 50px;
 }

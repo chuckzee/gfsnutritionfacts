@@ -110,13 +110,17 @@ a.ui-link.button {
   .button-retrieve-scan:focus {
     outline: hidden; }
 
-#scannerCheckBox {
+.ui-checkbox input.scanner-preference-checkbox {
   display: inline-block;
   position: relative;
   margin: 0 0;
   padding: 0 0;
   width: 12px;
   height: 12px; }
+
+.scanner-button {
+  width: 50px;
+  height: 50px; }
 
 .header-bar {
   height: 75px;
@@ -129,10 +133,6 @@ a.ui-link.button {
   width: 100%;
   top: 0;
   right: 0; }
-
-.scanner-button {
-  width: 50px;
-  height: 50px; }
 
 div.ui-page-active {
   background-color: transparent; }
@@ -159,21 +159,21 @@ div.ui-page-active {
   .nutrition-container .ingredients-row {
     font-style: italic; }
 
-#nutritionTable {
+.nutrition-table-parsed-container {
   padding: 0 0;
   margin: 0 0;
   border: 1px solid black;
   border-radius: 4px; }
-  #nutritionTable h1, #nutritionTable h2, #nutritionTable h3, #nutritionTable h4, #nutritionTable h5 {
+  .nutrition-table-parsed-container h1, .nutrition-table-parsed-container h2, .nutrition-table-parsed-container h3, .nutrition-table-parsed-container h4, .nutrition-table-parsed-container h5 {
     padding: 0 0;
     margin: 0 0; }
-  #nutritionTable p {
+  .nutrition-table-parsed-container p {
     padding: 0 1em; }
 
-#recentSearches {
+.recent-search-results-container {
   margin-bottom: 12px; }
 
-#shareContainer {
+.nutrition-facts-share-container {
   margin-bottom: 1em; }
 
 .preferences-box {

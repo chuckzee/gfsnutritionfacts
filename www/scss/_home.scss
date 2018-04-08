@@ -1,3 +1,5 @@
+// Home page specific layout and styling
+
 div.ui-page-active {
   background-color: rgba(0,0,0,0);
 }
@@ -34,7 +36,7 @@ div.ui-page-active {
   }
 }
 
-#nutritionTable {
+.nutrition-table-parsed-container {
   padding: 0 0;
   margin: 0 0;
   border: 1px solid black;
@@ -48,11 +50,11 @@ div.ui-page-active {
   }
 }
 
-#recentSearches {
+.recent-search-results-container {
   margin-bottom: 12px;
 }
 
-#shareContainer {
+.nutrition-facts-share-container {
   margin-bottom: 1em;
 }
 
